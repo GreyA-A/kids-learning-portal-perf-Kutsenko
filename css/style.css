@@ -1464,3 +1464,61 @@ body.theme-night .details-tooltip::before {
         font-size: 1.2rem;
     }
 }
+
+/* ==========================================================================
+   Кросбраузерні вендорні префікси (WebKit, Gecko, Blink)
+   ========================================================================== */
+
+/* 1. Скролбар для Firefox + WebKit */
+#about {
+    scrollbar-width: thin;                        /* Firefox */
+    scrollbar-color: var(--amber) #FFF3E0;        /* Firefox */
+}
+
+/* 2. Заборона виділення тексту іграшок для всіх рушіїв */
+.falling-toy {
+    -webkit-user-select: none;                    /* Safari, Chrome, Edge, Opera */
+    -moz-user-select: none;                       /* Firefox */
+    -ms-user-select: none;                        /* Старі версії IE/Edge */
+    user-select: none;                            /* Стандарт */
+}
+
+/* 3. Кросбраузерна 3D фліп-картка для Safari, Chrome та Firefox */
+.flip-card {
+    -webkit-perspective: 1000px;                  /* WebKit / Safari */
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    -webkit-transform-style: preserve-3d;         /* Safari обов'язково потребує префікса */
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, 
+.flip-card-back {
+    -webkit-backface-visibility: hidden;          /* WebKit / Safari обов'язковий префікс */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* 4. Кросбраузерні фільтри насиченості */
+main section article figure img {
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
+}
+
+main section article figure img:hover {
+    -webkit-filter: saturate(150%);
+    filter: saturate(150%);
+}

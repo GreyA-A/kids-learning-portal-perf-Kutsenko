@@ -1522,3 +1522,38 @@ main section article figure img:hover {
     -webkit-filter: saturate(150%);
     filter: saturate(150%);
 }
+
+/* ==========================================================
+   Оптимізація контрастності для Lighthouse (Крок 4)
+   ========================================================== */
+
+/* Усі акцентні кнопки сайту (у шапці, формі та контенті) */
+button,
+button[type="submit"],
+.btn-primary,
+a button {
+  background-color: #d84315 !important;
+  color: #ffffff !important;
+}
+
+button:hover,
+button[type="submit"]:hover,
+a button:hover {
+  background-color: #bf360c !important;
+}
+
+/* Кнопка скидання форми */
+button[type="reset"],
+.btn-secondary {
+  background-color: #546e7a !important;
+  color: #ffffff !important;
+}
+
+button[type="reset"]:hover {
+  background-color: #37474f !important;
+}
+
+/* Текст підказки форми зворотного зв'язку */
+.feedback-help-text {
+  color: #00695c !important;
+}

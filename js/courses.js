@@ -93,13 +93,20 @@ function initCoursesAccordion() {
         }
     });
 
-    // За замовчуванням відкриємо перший елемент для демонстрації роботи
+    // За замовчуванням відкриваємо перший елемент без запуску перехідної анімації
     if (items.length > 0) {
         const firstItem = items[0];
         const firstHeader = firstItem.querySelector('.accordion-header');
         const firstBody = firstItem.querySelector('.accordion-body');
         firstItem.classList.add('active');
         if (firstHeader) firstHeader.setAttribute('aria-expanded', 'true');
-        if (firstBody) firstBody.style.maxHeight = `${firstBody.scrollHeight}px`;
+        if (firstBody) {
+            firstBody.style.transition = 'none';
+            firstBody.style.maxHeight = `${firstBody.scrollHeight}px`;
+            // Повертаємо transition після завершення кадру ініціалізації
+            requestAnimationFrame(() => {
+                firstBody.style.transition = '';
+            });
+        }
     }
 }

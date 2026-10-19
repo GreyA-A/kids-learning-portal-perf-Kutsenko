@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші курси — Веб-портал «Розумники»</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Внутрішня таблиця стилів -->
+    <style>
+        .courses-counter {
+            font-size: 0.9rem;
+            color: #7B1FA2;
+            font-weight: 700;
+        }
+    </style>
+
+    <script defer src="js/courses.js"></script>
+</head>
+<body class="page-courses">
+
+    <!-- ШАПКА СТОРІНКИ -->
+    <header>
+        <div>
+            <img src="assets/images/logo.jpg" alt="Логотип дитячого навчального порталу Розумники" width="120" height="120">
+            <h1>Дитячий навчально-розважальний веб-портал «Розумники»</h1>
+        </div>
+        
+        <p>
+            <a href="index.html">
+                <button type="button">&larr; На Головну сторінку</button>
+            </a>
+        </p>
+    </header>
+
+    <!-- ОСНОВНА ЧАСТИНА -->
+    <main>
+        <h2>Каталог навчальних курсів для малечі та школярів</h2>
+        <p>Оберіть захоплюючий напрямок для вашої дитини. Кожен курс розроблено у формі інтерактивних завдань та ігор.</p>
+        <p class="courses-counter">Доступно курсів: 5</p>
+        
+            <!-- Інтерактивний акордеон у верхньому лівому куті (Вимога варіанта 4) -->
+            <div class="courses-accordion-wrapper">
+                <div class="accordion" id="coursesAccordion">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">📚</span>
+                        <strong>Швидкий навігатор по курсах (Короткий опис)</strong>
+                    </div>
+
+                    <!-- Елемент акордеона 1 -->
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header" aria-expanded="false">
+                            <span>1. Пригоди Веселого Рахівничка</span>
+                            <span class="chevron">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Базовий курс лічби, порівняння предметів та геометричних фігур для малюків 4–6 років через казкові сюжети.</p>
+                                <a href="#course-1" class="accordion-link">Перейти до курсу &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Елемент акордеона 2 -->
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header" aria-expanded="false">
+                            <span>2. Юний кодер у світі Scratch</span>
+                            <span class="chevron">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Візуальне блочне програмування, створення анімацій, перших інтерактивних лабіринтів та міні-ігор на платформі Scratch.</p>
+                                <a href="#course-2" class="accordion-link">Перейти до курсу &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Елемент акордеона 3 -->
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header" aria-expanded="false">
+                            <span>3. English ABC: Перші слова</span>
+                            <span class="chevron">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Англійська абетка, перші тематичні слова (тварини, кольори, родина) та аудіо-тренажери правильної вимови.</p>
+                                <a href="#course-3" class="accordion-link">Перейти до курсу &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Елемент акордеона 4 -->
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header" aria-expanded="false">
+                            <span>4. Маленький натураліст</span>
+                            <span class="chevron">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Пізнавальні уроки про явища природи, підводний світ, екологію, сортування сміття та безпечні домашні досліди.</p>
+                                <a href="#course-4" class="accordion-link">Перейти до курсу &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Елемент акордеона 5 -->
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header" aria-expanded="false">
+                            <span>5. Космічні мандри Сонячною системою</span>
+                            <span class="chevron">▼</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Дослідження планет, супутників, зірок і життя космонавтів на Міжнародній космічній станції за допомогою 3D-моделей.</p>
+                                <a href="#course-5" class="accordion-link">Перейти до курсу &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <section>
+            <!-- КУРС 1 -->
+            <article id="course-1">
+                <h3>1. Курс: «Пригоди Веселого Рахівничка»</h3>
+                <figure class="media-right">
+                    <img src="assets/images/course-math.jpg" alt="Курс інтерактивної математики" width="240" height="180">
+                    <figcaption>Ілюстративне фото: Інтерактивна арифметика та геометричні форми</figcaption>
+                </figure>
+                <p><strong>Назви уроків:</strong></p>
+                <ol>
+                    <li>Урок 1: Знайомство з цифрами від 1 до 10 у казковому лісі.</li>
+                    <li>Урок 2: Порівнюємо предмети: хто більший, а що важче?</li>
+                    <li>Урок 3: Чарівні фігури навколо нас (коло, квадрат, трикутник).</li>
+                    <li>Урок 4: Додавання та віднімання разом із лісовими звірятами.</li>
+                </ol>
+                <p><strong>Тип завдань:</strong> Міні-ігри «перетягни предмет», математичні лабіринти, аудіо-загадки з лічби.</p>
+                <p><a href="https://www.khanacademy.org/math/early-math" target="_blank" rel="noopener noreferrer">Докладніше про тему</a></p>
+            </article>
+
+            <hr>
+
+            <!-- КУРС 2 -->
+            <article id="course-2">
+                <h3>2. Курс: «Юний кодер у світі Scratch»</h3>
+                <figure class="media-right">
+                    <img src="assets/images/course-scratch.jpg" alt="Курс візуального кодування" width="180" height="180">
+                    <figcaption>Ілюстративне фото: Блочне програмування персонажів</figcaption>
+                </figure>
+                <p style="margin-top: 0;"><strong>Назви уроків:</strong></p>
+                <ol>
+                    <li>Урок 1: Перше знайомство з котиком Скретчем і сценою дій.</li>
+                    <li>Урок 2: Вчимо героя ходити та танцювати: лінійні алгоритми та цикли.</li>
+                    <li>Урок 3: Створення власної гри «Злови яблуко у кошик».</li>
+                    <li>Урок 4: Озвучування героїв та нарахування ігрових очок.</li>
+                </ol>
+                <p><strong>Тип завдань:</strong> Збирання пазлів із блоків коду, пошук помилок у готових програмах, створення власного міні-мультфільму.</p>
+                <p><a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Докладніше про тему</a></p>
+            </article>
+
+            <hr>
+
+            <!-- КУРС 3 -->
+            <article id="course-3">
+                <h3>3. Курс: «English ABC: Перші слова англійською»</h3>
+                <figure class="media-right">
+                    <img src="assets/images/course-english.jpg" alt="Курс англійської для дітей" width="144" height="180">
+                    <figcaption>Ілюстративне фото: Весела абетка та базові слова</figcaption>
+                </figure>
+                <p><strong>Назви уроків:</strong></p>
+                <ol>
+                    <li>Урок 1: Співаємо абетку (The ABC Song) та вчимо звуки.</li>
+                    <li>Урок 2: Світ тварин: свійські улюбленці та дикі хижаки.</li>
+                    <li>Урок 3: Яскрава палітра кольорів та назви іграшок.</li>
+                    <li>Урок 4: Моя родина і чарівні слова ввічливості.</li>
+                </ol>
+                <p><strong>Тип завдань:</strong> Аудіотренування вимови, картки-перевертні (flashcards), вікторини на відповідність картинки й аудіо.</p>
+                <p><a href="https://learnenglishkids.britishcouncil.org/" target="_blank" rel="noopener noreferrer">Докладніше про тему</a></p>
+            </article>
+
+            <hr>
+
+            <!-- КУРС 4 -->
+            <article id="course-4">
+                <h3>4. Курс: «Маленький натураліст: Таємниці природи»</h3>
+                <figure class="media-right">
+                    <img src="assets/images/course-nature.jpg" alt="Курс природознавства" width="315" height="180">
+                    <figcaption>Ілюстративне фото: Дослідження рослин і тварин нашої планети</figcaption>
+                </figure>
+                <p><strong>Назви уроків:</strong></p>
+                <ol>
+                    <li>Урок 1: Чому листя змінює колір та як з'являється дощ?</li>
+                    <li>Урок 2: Підводний світ коралових рифів та морські велетні.</li>
+                    <li>Урок 3: Дивовижні рослини та комахи-помічники в природі.</li>
+                    <li>Урок 4: Сортування сміття: як стати супергероєм довкілля.</li>
+                </ol>
+                <p><strong>Тип завдань:</strong> Інтерактивні фото-квести, екологічні сортувальні ігри, перегляд коротких пізнавальних роликів.</p>
+                <p><a href="https://kids.nationalgeographic.com/" target="_blank" rel="noopener noreferrer">Докладніше про тему</a></p>
+            </article>
+
+            <hr>
+
+            <!-- КУРС 5 -->
+            <article id="course-5">
+                <h3>5. Курс: «Космічні мандри Сонячною системою»</h3>
+                <figure class="media-right">
+                    <img src="assets/images/course-space.jpg" alt="Курс астрономії для дітей" width="130" height="180">
+                    <figcaption>Ілюстративне фото: Планети та сузір'я</figcaption>
+                </figure>
+                <p><strong>Назви уроків:</strong></p>
+                <ol>
+                    <li>Урок 1: Палаюче Сонце та його вірні супутники.</li>
+                    <li>Урок 2: Земля і таємничий супутник Місяць.</li>
+                    <li>Урок 3: Червоний Марс та планети-гіганти з газовими кільцями.</li>
+                    <li>Урок 4: Один день на Міжнародній космічній станції (МКС).</li>
+                </ol>
+                <p><strong>Тип завдань:</strong> 3D-мандрівка планетами, складання ракети з деталей, тестування на отримання бейджа «Юний космонавт».</p>
+                <p><a href="https://spaceplace.nasa.gov/" target="_blank" rel="noopener noreferrer">Докладніше про тему</a></p>
+            </article>
+        </section>
+
+        <p>
+            <a href="index.html">
+                <button type="button">&larr; Повернутися на Головну сторінку</button>
+            </a>
+        </p>
+    </main>
+
+    <hr>
+
+    <!-- ПІДВАЛ -->
+    <footer>
+        <p>&copy; 2026 Навчальний веб-портал «Розумники». Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв’язок — Веб-портал «Розумники»</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Внутрішня таблиця стилів -->
+     <style>
+        .feedback-help-text {
+            color: #00897B;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+     </style>
+
+     <script defer src="js/feedback.js"></script>
+</head>
+<body class="page-feedback">
+
+    <!-- ШАПКА СТОРІНКИ -->
+    <header>
+        <div>
+            <img src="assets/images/logo.jpg" alt="Логотип дитячого навчального порталу Розумники" width="120" height="120">
+            <h1>Дитячий навчально-розважальний веб-портал «Розумники»</h1>
+        </div>
+        
+        <p>
+            <a href="index.html">
+                <button type="button">← На Головну сторінку</button>
+            </a>
+        </p>
+    </header>
+
+    <hr>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ -->
+    <main>
+        <h2>Форма зворотного зв’язку для батьків та партнерів</h2>
+        <p>Будь ласка, заповніть форму нижче, якщо у вас виникли запитання, пропозиції або побажання щодо покращення навчальних матеріалів.</p>
+
+        <!-- ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ -->
+        <form action="#" method="post">
+
+            <p class="feedback-help-text">Поля, позначені зірочкою (*), обов'язкові для заповнення.</p>
+
+            <!-- Група полів 1-4: рамка з легендою "Персональна інформація" -->
+            <fieldset>
+                <legend><strong>Персональна інформація</strong></legend>
+
+                <!-- 1. Прізвище та ім’я батьків -->
+                <p>
+                    <label for="parent-name">Прізвище та ім’я батьків (або опікуна): *</label><br>
+                    <input type="text" id="parent-name" name="parent_name" placeholder="Наприклад: Коваленко Олена Іванівна" size="40" required>
+                </p>
+
+                <!-- 2. E-mail батьків -->
+                <p>
+                    <label for="parent-email">E-mail батьків: *</label><br>
+                    <input type="email" id="parent-email" name="parent_email" placeholder="example@gmail.com" size="40" required>
+                </p>
+
+                <!-- 3. Вік дитини -->
+                <p>
+                    <label for="child-age">Вік дитини (років): *</label><br>
+                    <input type="number" id="child-age" name="child_age" min="3" max="16" step="1" value="6" required>
+                </p>
+
+                <!-- 4. Стать дитини -->
+                <p>
+                    <span>Стать дитини: *</span><br>
+                    <input type="radio" id="gender-boy" name="child_gender" value="хлопчик" checked>
+                    <label for="gender-boy">Хлопчик</label>
+
+                    <input type="radio" id="gender-girl" name="child_gender" value="дівчинка">
+                    <label for="gender-girl">Дівчинка</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- 5. Випадаючий список "Мета зворотнього зв'язку" -->
+            <p class="form-purpose">
+                <label for="feedback-purpose"><strong>Мета зворотнього зв’язку: *</strong></label><br>
+                <select id="feedback-purpose" name="feedback_purpose" required>
+                    <option value="" disabled selected>-- Оберіть тему звернення --</option>
+                    <option value="cooperation">співпраця</option>
+                    <option value="complaint">скарга на неякісний контент</option>
+                    <option value="suggestion">пропозиція</option>
+                    <option value="bug">наявність помилки</option>
+                </select>
+            </p>
+
+            <!-- 6. Поле "Детально" з обмеженнями на висоту, ширину і кількість символів -->
+            <p class="form-details">
+                <label for="feedback-details"><strong>Детально (максимум 300 символів): *</strong></label><br>
+                <textarea id="feedback-details" name="feedback_details" rows="6" cols="50" maxlength="300" placeholder="Опишіть ваше звернення (до 300 символів)..." required></textarea>
+            </p>
+
+            <!-- Згода на обробку персональних даних -->
+            <p class="form-consent">
+                <input type="checkbox" id="consent" name="data_consent" required>
+                <label for="consent">Я надаю беззастережну згоду на обробку моїх персональних даних відповідно до політики конфіденційності порталу. *</label>
+            </p>
+
+            <!-- Кнопки відправлення та скидання -->
+            <p class="form-actions">
+                <button type="submit">Надіслати повідомлення</button>
+                <button type="reset">Очистити форму</button>
+            </p>
+
+        </form>
+    </main>
+
+    <hr>
+
+    <!-- ПІДВАЛ -->
+    <footer>
+        <p>© 2026 Навчальний веб-портал «Розумники». Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>

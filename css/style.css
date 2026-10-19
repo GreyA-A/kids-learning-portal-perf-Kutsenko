@@ -525,7 +525,25 @@ article figure img:hover {
 }
 
 .page-feedback header {
-    padding-top: 150px;
+    position: static;
+    width: 100%;
+    padding: 25px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Скидаємо absolute для логотипу на сторінці зворотного зв'язку */
+.page-feedback header > div:first-child {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-feedback header p {
+    margin: 0;
 }
 
 .page-feedback > hr {
@@ -1271,5 +1289,178 @@ body.theme-night .details-tooltip::before {
 
     body.theme-night .details-tooltip::before {
         border-color: transparent transparent #E65100 transparent;
+    }
+}
+
+/* ==========================================================================
+   ЛАБОРАТОРНА №5. Адаптивність та медіа-запити (RWD & Breakpoints)
+   Контрольні точки: 1024px, 768px, 480px, 360px
+   ========================================================================== */
+
+/* 1. Планшети в альбомній орієнтації та невеликі ноутбуки (<= 1024px) */
+@media only screen and (max-width: 1024px) {
+    body {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    /* Зменшуємо бічну панель на лептопах */
+    aside {
+        min-width: 280px;
+    }
+
+    #study-plan table {
+        font-size: 0.95rem;
+    }
+}
+
+/* 2. Планшети у портретній орієнтації (<= 768px) */
+@media only screen and (max-width: 768px) {
+    /* Перемикаємо сітку body в одну колонку */
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+    }
+
+    header {
+        padding-top: 130px;
+    }
+
+    header > div:first-child img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    aside {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    /* Гарантований внутрішній скрол таблиці без розпирання сторінки */
+    .table-wrap {
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        margin: 15px 0;
+    }
+
+    #study-plan table {
+        min-width: 620px; /* Мінімальна ширина для збереження колонок */
+        width: 100%;
+    }
+
+    /* Скидання hover-зміщення таблиці на мобільних пристроях */
+    #study-plan .table-wrap:hover table {
+        transform: none;
+    }
+}
+
+/* 3. Смартфони з великими екранами (<= 600px) */
+@media only screen and (max-width: 600px) {
+    header {
+        position: static;
+        padding-top: 10px;
+    }
+
+    /* Логотип і назва переходять у нормальний потік */
+    header > div:first-child {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    header nav > ul {
+        justify-content: center;
+    }
+
+    header div:last-child {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Медіа розгортаються на повну ширину */
+    article figure.media-left,
+    article figure.media-right {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 12px 0 !important;
+    }
+
+    .flip-card {
+        max-width: 100%;
+    }
+}
+
+/* 4. Стандартні смартфони (<= 480px) */
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 1.15rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Каталог курсів в одну колонку */
+    .page-courses section {
+        grid-template-columns: 1fr;
+    }
+
+    /* Форма зворотного зв'язку займає 100% ширини */
+    .page-feedback fieldset,
+    .form-purpose,
+    .form-details {
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .details-tooltip {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        transform: none !important;
+    }
+
+    .details-tooltip::before {
+        display: none;
+    }
+}
+
+/* 5. Малі мобільні пристрої (<= 360px) */
+@media only screen and (max-width: 360px) {
+    nav > ul > li > a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .page-courses article h3 {
+        font-size: 1.2rem;
     }
 }
